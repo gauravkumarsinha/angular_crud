@@ -1,0 +1,79 @@
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+        <h1 style="color: rgb(255, 255, 255)">Angular CRUD</h1>
+    </div>
+</nav>
+
+
+<form [formGroup]="formValue">
+    <table class="table mt-3" align="center" border="2px">
+        <thead align="center">
+            <th>Employee Details</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <label for="fullname">Full Name</label>
+                </td>
+                <td>
+                    <input type="text" formControlName="fullName" class="form-control" required="This is mandatory">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="email">Email</label>
+                </td>
+                <td><input type="email" formControlName="emailId" class="form-control"></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="ciity">City</label>
+                </td>
+                <td><input type="text" formControlName="city" class="form-control"></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="salary">Salary</label>
+                </td>
+                <td><input type="number" formControlName="salary" class="form-control"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td align="right">
+                    <button type="submit" (click)="postEmployeDetails()" >Submit</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+
+
+
+
+
+
+
+<table class="table mt-3">
+    <thead>
+        <tr>
+            <th scope="col">Full Name</th>
+            <th scope="col">Email ID</th>
+            <th scope="col">Salary</th>
+            <th scope="col">City</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let rows of employeData">
+            <td>{{rows.fullname}}</td>
+            <td>{{rows.emailId}}</td>
+            <td>{{rows.salary}}</td>
+            <td>{{rows.city}}</td>
+            <td>
+                <button (click)="onEdit(rows)" class="btn btn-info">Edit</button>
+                <button (click)="deleteEmploye(rows)" class="btn btn-danger mx-3">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+  

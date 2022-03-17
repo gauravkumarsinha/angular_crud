@@ -1,0 +1,22 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "fullname": "Gaurav Kumar",
+      "salary": 21000,
+      "emailId": "gaurav.kumar@oneadvanced.com",
+      "city": "Tumkur"
+    },
+    {
+      "id": 2,
+      "fullname": "Sameer Kumar",
+      "salary": 20000,
+      "emailId": "sameer@gmail.com",
+      "city": "Bhagalpur"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
